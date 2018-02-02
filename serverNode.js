@@ -11,10 +11,10 @@ http.createServer((request, response) =>
 
  	let html = "";
 
- 	 html+="<table>"
- 		html +="<p>"
- 			obj
- 		html +="</p>"
+ 	html+="<table>"
+ 		for (let p in obj) { 
+     		html += "<tr> <td>"+p+"<td><td>"+ obj[p]+"<td></tr>"
+   		} 
  	html +="</table>"
  	response.write(html); 
  	response.end(); 
